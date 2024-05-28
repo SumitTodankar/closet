@@ -1,0 +1,27 @@
+<header class="app-header w-100">
+  <h4 class="title">FAKE STORE</h4>
+  <nav class="nav-list">
+    <ul
+      class="list unauthorized"
+      *ngIf="authSignal.currentUserSignal() === null"
+    >
+      <li *ngFor="let item of lists">
+        <a [routerLink]="item.linkTo">
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+    <ul class="list authorized" *ngIf="authSignal.currentUserSignal() !== null">
+      <li [title]="authSignal.currentUserSignal()?.username">
+        <a (click)="profilePage()">
+          <i class="bi bi-person-workspace"></i>
+        </a>
+      </li>
+      <li title="Logout">
+        <a (click)="logout()">
+          <i class="bi bi-box-arrow-in-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

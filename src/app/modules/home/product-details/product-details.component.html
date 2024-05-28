@@ -1,0 +1,33 @@
+<div class="back">
+  <button type="button" class="btn" routerLink="/home"><< Back</button>
+</div>
+<div class="product-details">
+  <div class="content left">
+    <img class="prod-image" [src]="product.image" alt="product.image" />
+  </div>
+  <div class="content right">
+    <h1 class="title mt-2">{{ product.title }}</h1>
+    <div class="det d-flex justify-content-between mt-3">
+      <h6 class="category">{{ product.category }}</h6>
+      <h5 class="rating">
+        <span class="me-1"> {{ product.rating.rate }} </span> <sub>/ 5</sub>
+      </h5>
+    </div>
+    <div class="my-4">
+      <h2 class="price">$ {{ product.price }}</h2>
+    </div>
+    <h5>Description:</h5>
+    <p class="desc">{{ product.description }}</p>
+
+    <div class="buttons">
+      <button class="btn btn-secondary">
+        <span><i class="bi bi-heart-fill"></i></span>
+        <span>Wishlist</span>
+      </button>
+      <button class="btn btn-cart">
+        <span><i class="bi bi-bag-heart-fill"></i></span>
+        <span>ADD TO CART</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+.home-layout {
+  position: absolute;
+  width: 100%;
+
+  .dashboard {
+    margin: 30px;
+    padding-left: 5rem;
+
+    .head {
+      font-size: 25px;
+      margin: 0 0 20px;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      // grid-template-rows: 400px;
+      gap: 3px;
+      padding-right: 5rem;
+
+      .card {
+        padding-top: 16px;
+        .card-img-top {
+          height: 200px;
+          width: 60%;
+          margin: 0 auto;
+          cursor: pointer;
+          transition: transform 0.5s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .card-body {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .card-title {
+            flex-grow: 1;
+          }
+
+          .card-text {
+            margin: 0;
+            font-size: 20px;
+            color: #eb9423;
+            font-family: Georgia, "Times New Roman", Times, serif;
+          }
+
+          .btn {
+            width: 45%;
+            align-self: flex-end;
+          }
+        }
+      }
+    }
+  }
+}
