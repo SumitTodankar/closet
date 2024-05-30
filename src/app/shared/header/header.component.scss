@@ -24,6 +24,11 @@ $md: 900px;
       width: 5.8rem;
       bottom: 0;
       left: 50.7%;
+
+      @media screen and (max-width: $sm) {
+        width: 5.1rem;
+        left: 48.2%;
+      }
     }
 
     @media screen and (max-width: $sm) {
